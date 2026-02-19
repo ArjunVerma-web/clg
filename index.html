@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shobhit University, Gangoh - CarryOver Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Animated Background -->
+    <div class="bg-animation"></div>
+
+    <!-- Loading Overlay -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Header -->
+    <header class="header">
+        <div class="decoration decoration-1"></div>
+        <div class="decoration decoration-2"></div>
+        <div class="header-content">
+            <img src="https://sug.ac.in/images/logo-naacA.png" alt="Shobhit University Logo" class="logo">
+            <div class="header-text">
+                <h1>Shobhit University, Gangoh</h1>
+                <p>Estd. under Shobhit University Gangoh (Saharanpur) Act, 2011</p>
+                <div class="portal-title">📝 Student Portal - CarryOver Form</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="form-container">
+            <!-- Success Message -->
+            <div id="successMessage" class="success-message">
+                <strong>
+                    <span class="success-icon">✓</span>
+                    Success! Your CarryOver request has been submitted successfully.
+                </strong>
+                <p style="margin-top: 8px; font-size: 13px; opacity: 0.8;">We will review your application and contact you shortly.</p>
+            </div>
+
+            <form id="carryOverForm">
+                <!-- Student Details Section -->
+                <div class="form-card" id="studentCard">
+                    <div class="form-section">
+                        <h2 class="section-title">Student Details</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="studentName">Student Name <span class="required">*</span></label>
+                                <input type="text" id="studentName" name="studentName" placeholder="Enter your full name" required>
+                                <span class="error-text">Please enter your name</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="fatherName">Father's Name <span class="required">*</span></label>
+                                <input type="text" id="fatherName" name="fatherName" placeholder="Enter father's name" required>
+                                <span class="error-text">Please enter father's name</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="rollNumber">Roll Number <span class="required">*</span></label>
+                                <input type="text" id="rollNumber" name="rollNumber" placeholder="Enter roll number" required>
+                                <span class="error-text">Please enter roll number</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="enrollmentNumber">Enrollment Number <span class="required">*</span></label>
+                                <input type="text" id="enrollmentNumber" name="enrollmentNumber" placeholder="Enter enrollment number" required>
+                                <span class="error-text">Please enter enrollment number</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="contact">Contact Number <span class="required">*</span></label>
+                                <input type="tel" id="contact" name="contact" placeholder="Enter 10-digit mobile number" pattern="[0-9]{10}" required>
+                                <span class="error-text">Please enter valid contact number</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Academic Details Section -->
+                <div class="form-card" id="academicCard">
+                    <div class="form-section">
+                        <h2 class="section-title">Academic Details</h2>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="course">Course <span class="required">*</span></label>
+                                <select id="course" name="course" required>
+                                    <option value="">Select Course</option>
+                                    <option value="B.Tech">B.Tech</option>
+                                    <option value="M.Tech">M.Tech</option>
+                                    <option value="B.Sc">B.Sc</option>
+                                    <option value="M.Sc">M.Sc</option>
+                                    <option value="BBA">BBA</option>
+                                    <option value="MBA">MBA</option>
+                                    <option value="B.Com">B.Com</option>
+                                    <option value="M.Com">M.Com</option>
+                                    <option value="BA">BA</option>
+                                    <option value="MA">MA</option>
+                                </select>
+                                <span class="error-text">Please select a course</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="semester">Semester <span class="required">*</span></label>
+                                <select id="semester" name="semester" required>
+                                    <option value="">Select Semester</option>
+                                    <option value="1st">1st Semester</option>
+                                    <option value="2nd">2nd Semester</option>
+                                    <option value="3rd">3rd Semester</option>
+                                    <option value="4th">4th Semester</option>
+                                    <option value="5th">5th Semester</option>
+                                    <option value="6th">6th Semester</option>
+                                    <option value="7th">7th Semester</option>
+                                    <option value="8th">8th Semester</option>
+                                </select>
+                                <span class="error-text">Please select a semester</span>
+                            </div>
+                            <div class="form-group">
+                                <label for="year">Year <span class="required">*</span></label>
+                                <select id="year" name="year" required>
+                                    <option value="">Select Year</option>
+                                    <option value="2024">2024</option>
+                                    <option value="2025">2025</option>
+                                    <option value="2026">2026</option>
+                                    <option value="2027">2027</option>
+                                    <option value="2028">2028</option>
+                                    <option value="2029">2029</option>
+                                    <option value="2030">2030</option>
+                                </select>
+                                <span class="error-text">Please select a year</span>
+                            </div>
+                            <div class="form-group">
+                                <label>Semester Type <span class="required">*</span></label>
+                                <div class="radio-group">
+                                    <label class="radio-option">
+                                        <input type="radio" name="semesterType" value="Even" required>
+                                        <span>Even Semester</span>
+                                    </label>
+                                    <label class="radio-option">
+                                        <input type="radio" name="semesterType" value="Odd">
+                                        <span>Odd Semester</span>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Subject Details Section -->
+                <div class="form-card" id="subjectCard">
+                    <div class="form-section">
+                        <h2 class="section-title">Subject Details</h2>
+                        <div id="subjectsContainer">
+                            <!-- Subject entries will be added here -->
+                        </div>
+                        <button type="button" class="add-subject-btn" onclick="addSubject()">
+                            <span>+</span> Add Another Subject
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Submit Section -->
+                <div class="form-card" id="submitCard">
+                    <div class="submit-section">
+                        <button type="submit" class="submit-btn">
+                            🚀 Submit CarryOver Request
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2024 Shobhit University, Gangoh. All Rights Reserved.</p>
+        <p>🏆 NAAC Accredited Grade 'A' University</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
